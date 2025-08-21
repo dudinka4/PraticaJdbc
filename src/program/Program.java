@@ -26,9 +26,9 @@ public class Program {
 
         }
         finally{
-            DB.closeResultSet(rs);
+            DB.closeResultSet(rs);//njjnjnijnij
             DB.closeStatement(st);
-            DB.closeConnection();
+            DB.closeConnection(); //rjejww
         }
 
     } //oi t
