@@ -13,9 +13,9 @@ public class Program {
         ResultSet rs = null; //resultado da tabela
 
         try {
-            conn = DB.getConnection();
-            st = conn.createStatement();
-            rs = st.executeQuery("select * from seller");
+            conn = DB.getConnection(); //se conecta com a classe
+            st = conn.createStatement(); //cria uma conecção com o banco
+            rs = st.executeQuery("select * from seller"); //executa um comando sql (statment - instrução executada num bd)
 
             while (rs.next()) {
                 System.out.println(rs.getInt("Id" + " " + rs.getString("Name") + "\n" + rs.getString("Email") + "\n"));
@@ -26,11 +26,11 @@ public class Program {
 
         }
         finally{
-            DB.closeResultSet(rs);//njjnjnijnij
+            DB.closeResultSet(rs); //pega os metodos do arquivo DB
             DB.closeStatement(st);
-            DB.closeConnection(); //rjejww
+            DB.closeConnection();
         }
 
-    } //oi t
+    }
 
 }
