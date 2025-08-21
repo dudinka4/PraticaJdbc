@@ -28,7 +28,7 @@ public class Program {
         finally{
             DB.closeResultSet(rs);
             DB.closeStatement(st);
-            DB.closeConnection();
+            DB.closeConnection(); //rjejww
         }
 
     } //oi t
