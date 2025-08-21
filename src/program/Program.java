@@ -28,7 +28,7 @@ public class Program {
         finally{
             DB.closeResultSet(rs); //pega os metodos do arquivo DB
             DB.closeStatement(st);
-            DB.closeConnection();
+            DB.closeConnection(); //rjejww
         }
 
     }
