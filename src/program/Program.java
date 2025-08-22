@@ -18,17 +18,17 @@ public class Program {
             rs = st.executeQuery("select * from seller"); //executa um comando sql (statment - instrução executada num bd)
 
             while (rs.next()) {
-                System.out.println(rs.getInt("Id" + " " + rs.getString("Name") + "\n" + rs.getString("Email") + "\n"));
+                System.out.println(rs.getInt("Id") + " " + rs.getString("Name") + "\n" + rs.getString("Email") + "\n");
             }
         }
         catch(Exception e){
             e.printStackTrace();
 
         }
-        finally{
-            DB.closeResultSet(rs); //pega os metodos do arquivo DB
+        finally{ //pega os metodos do arquivo DB para fecha-los
+            DB.closeResultSet(rs);
             DB.closeStatement(st);
-            DB.closeConnection(); //rjejww
+            DB.closeConnection();
         }
 
     }
